@@ -6,11 +6,13 @@ export default defineConfig({
   plugins: [react()],
   base: '/vanlife/',
   server: {
-    // Enable HTML5 history API fallback
-    historyApiFallback: {
-      rewrites: [
-        { from: /./, to: '/index.html' },
-      ],
+    configureServer(server) {
+      server.middlewares.use((req, res, next) => {
+        if (req.url.startsWith('/vanlife') && !req.url.includes('.')) {
+          req.url = '/index.html';
+        }
+        next();
+      });
     },
   },
 })
