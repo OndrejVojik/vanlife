@@ -28,6 +28,8 @@ import { requireAuth } from "./utils"
 
 import "./server"
 
+const basePath = '/vanlife'
+
 const router = createBrowserRouter(createRoutesFromElements(
   <Route path="/" element={<Layout />}>
     <Route index element={<Home />} />
@@ -98,7 +100,8 @@ const router = createBrowserRouter(createRoutesFromElements(
     </Route>
     <Route path="*" element={<NotFound />} />
   </Route>
-))
+),
+{basename: basePath})
 
 function App() {
   return (
