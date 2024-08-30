@@ -2,10 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import {
   RouterProvider,
+  createBrowserRouter,
   createRoutesFromElements,
   Route,
-  Link,
-  createHashRouter
+  Link
 } from "react-router-dom"
 import Home from "./pages/Home"
 import About from "./pages/About"
@@ -30,7 +30,7 @@ import "./server"
 
 const basePath = '/vanlife'
 
-const router = createHashRouter(createRoutesFromElements(
+const router = createBrowserRouter(createRoutesFromElements(
   <Route path="/" element={<Layout />}>
     <Route index element={<Home />} />
     <Route path="about" element={<About />} />
