@@ -30,10 +30,10 @@ jobs:
       - name: Upload Build Output/Artifacts
         uses: actions/upload-pages-artifact@v3
         with:
-          name: "ghp-react-build"
+          name: "vanlife"
           path: dist
       - name: Deploy to GH Pages
         uses: actions/deploy-pages@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          artifact_name: "ghp-react-build"
+          artifact_name: "vanlife"
