@@ -6,6 +6,11 @@ export default defineConfig({
   plugins: [react()],
   base: '/vanlife/',
   server: {
-    historyApiFallback: true, // Enable HTML5 history API fallback
+    // Enable HTML5 history API fallback
+    historyApiFallback: {
+      rewrites: [
+        { from: /./, to: '/index.html' },
+      ],
+    },
   },
 })
