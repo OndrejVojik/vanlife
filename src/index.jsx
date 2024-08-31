@@ -28,7 +28,7 @@ import { requireAuth } from "./utils"
 
 import "./server"
 
-const basePath = import.meta.env.VITE_BASE_PATH;
+const basePath = import.meta.env.VITE_BASE_PATH || '/';
 // const basePath = '/vanlife'
 
 const router = createBrowserRouter(createRoutesFromElements(
