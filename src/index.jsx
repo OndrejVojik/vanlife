@@ -28,7 +28,8 @@ import { requireAuth } from "./utils"
 
 import "./server"
 
-const basePath = '/vanlife'
+const basePath = import.meta.env.VITE_BASE_PATH || '/';
+// const basePath = '/vanlife'
 
 const router = createBrowserRouter(createRoutesFromElements(
   <Route path="/" element={<Layout />}>
@@ -100,7 +101,8 @@ const router = createBrowserRouter(createRoutesFromElements(
     </Route>
     <Route path="*" element={<NotFound />} />
   </Route>
-))
+),
+{basename: basePath})
 
 function App() {
   return (
