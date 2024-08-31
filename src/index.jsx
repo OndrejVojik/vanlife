@@ -30,7 +30,7 @@ import "./server"
 
 const basePath = import.meta.env.VITE_BASE_PATH || '/';
 // const basePath = '/vanlife'
-
+console.log(import.meta.env.VITE_BASE_PATH)
 const router = createBrowserRouter(createRoutesFromElements(
   <Route path="/" element={<Layout />}>
     <Route index element={<Home />} />
