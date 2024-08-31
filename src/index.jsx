@@ -100,8 +100,7 @@ const router = createBrowserRouter(createRoutesFromElements(
     </Route>
     <Route path="*" element={<NotFound />} />
   </Route>
-),
-{basename: basePath})
+))
 
 function App() {
   return (
