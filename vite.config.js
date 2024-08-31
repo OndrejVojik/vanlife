@@ -10,7 +10,7 @@ export default defineConfig(({ command, mode }) => {
 
   return {
     plugins: [react()],
-    base: '/vanlife',
+    base: env.production.VITE_BASE_PATH,
   };
 });
 // export default defineConfig(({ command, mode }) => {
