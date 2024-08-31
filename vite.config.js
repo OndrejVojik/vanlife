@@ -10,7 +10,7 @@ export default defineConfig(({ command, mode }) => {
 
   return {
     plugins: [react()],
-    base: env.production.VITE_BASE_PATH,
+    base: env.VITE_BASE_PATH,
   };
 });
 // export default defineConfig(({ command, mode }) => {
