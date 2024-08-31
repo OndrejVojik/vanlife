@@ -6,7 +6,7 @@ export default defineConfig(({ command, mode }) => {
   const env = loadEnv(mode, process.cwd(), '');
 
   // Use the loaded environment variable to set the base path
-  const basePath = env.VITE_BASE_PATH || '/';
+  const basePath = '/vanlife';
 
   return {
     plugins: [react()],
