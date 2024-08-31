@@ -21,6 +21,6 @@ export default ({ mode }) => {
 
   return defineConfig({
       plugins: [react()],
-      base: process.env.VITE_BASE_PATH,
+      base: '/vanlife',
   });
 }
