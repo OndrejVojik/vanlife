@@ -7,9 +7,11 @@
       // Redirect to index.html for GitHub Pages
       var l = window.location;
       var base = '/vanlife'; // Adjust this value based on your base path
-      var path = l.pathname.replace(base, '');
-      var newUrl = l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') + base + path + l.search + l.hash;
-      window.location.replace(newUrl);
+      if (!l.pathname.startsWith(base + '/index.html')) {
+        var path = l.pathname.replace(base, '');
+        var newUrl = l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') + base + '/index.html' + path + l.search + l.hash;
+        window.location.replace(newUrl);
+      }
     </script>
   </head>
   <body>
