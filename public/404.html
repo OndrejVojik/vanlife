@@ -7,7 +7,7 @@
       // Redirect to base path for GitHub Pages
       var l = window.location;
       var base = '/vanlife'; // Adjust this value based on your base path
-      if (!l.pathname.startsWith(base + '/')) {
+      if (l.pathname.startsWith(base) && !l.pathname.endsWith('/index.html')) {
         var path = l.pathname.replace(base, '');
         var newUrl = l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') + base + path + l.search + l.hash;
         window.location.replace(newUrl);
